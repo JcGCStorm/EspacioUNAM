@@ -1,0 +1,30 @@
+name: Compilar PDF
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '.github/workflows/build-pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Compilar main.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+
+      - name: Commit del PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Compilar main.pdf"
+          file_pattern: main.pdf
