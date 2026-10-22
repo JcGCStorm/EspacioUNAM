@@ -1,0 +1,216 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{sectsty}
+\usepackage[spanish]{babel}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{anysize}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage[colorlinks=true, urlcolor=green, linkcolor=red]{hyperref}
+
+% === Colores (tema oscuro) ===
+\definecolor{drac-bg}{HTML}{282A36}
+\definecolor{myyellow}{HTML}{e7e70d}
+\definecolor{mypurple}{HTML}{3b1a52}
+\marginsize{22mm}{22mm}{15mm}{15mm} % izquierda, derecha, arriba, abajo
+
+\sectionfont{\color{green}}          % Secciones en verde
+\subsectionfont{\color{red!80}}      % Subsecciones en rojo al 80%
+\subsubsectionfont{\color{blue!60}}  % Subsubsecciones en azul al 60%
+
+\pagecolor{drac-bg}  % Fondo casi negro
+\color{white!95}      % Texto casi blanco
+
+\setcounter{tocdepth}{2}
+
+% Comando para mostrar codigos
+\newcommand{\codigos}[1]{\textbf{\textcolor{myyellow}{#1}}}
+
+% Comando para carreras sin codigo todavia
+\newcommand{\sincodigo}{\textit{\textcolor{white!60}{Sin código registrado todavía.}}}
+
+% === Enlaces al repositorio ===
+    % Arman las URLs de GitHub que usan \reporte y reportes.tex.
+    % De preferencia no le cambien, en sí solo deberías de cambiarle si haces un fork y quieres que los enlaces de los reportes apunten a tu propio repo.
+\newcommand{\githubowner}{JcGCStorm}
+\newcommand{\githubrepo}{EspacioUNAM}
+\newcommand{\githubbranch}{main}
+\newcommand{\ghfile}[1]{https://github.com/\githubowner/\githubrepo/blob/\githubbranch/#1}
+\newcommand{\ghedit}[1]{https://github.com/\githubowner/\githubrepo/edit/\githubbranch/#1}
+
+% Reportar un codigo que no funciona
+\newcommand{\reporte}[4]{%
+  \item \codigos{#1} --- #2\newline
+        \textit{Motivo:} #3\newline
+        \href{\ghfile{#4}}{\small Ver archivo} \quad \href{\ghedit{#4}}{\small Editar y borrar}%
+}
+
+% Caja de avisos
+\newtcolorbox{myquote}[1]{
+  enhanced,
+  boxrule=0pt,
+  frame hidden,
+  borderline west={3pt}{0pt}{yellow!60!black},
+  colback=mypurple,
+  arc=0pt,
+  outer arc=0pt,
+  left=15pt,
+  right=15pt,
+  top=10pt,
+  bottom=10pt,
+  coltitle=myyellow,
+  title={#1},
+  fonttitle=\Large\bfseries,
+  attach title to upper,
+  after title={\vspace{0.5em}\par},
+  colupper=white
+}
+
+\begin{document}
+
+% Evita que los codigos se corten con guiones permite cortar solo entre comas.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=3000
+\emergencystretch=2.5em
+
+% ===================== PORTADA =====================
+\thispagestyle{empty}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=5cm]{imagenesPortada/unamYellow.png}
+\end{figure}
+
+\begin{center}
+  \vspace{0.3cm}
+  \LARGE
+  UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO
+
+  \vspace{0.7cm}
+  \LARGE
+  ESPACIO UNAM
+
+  \vspace{1.2cm}
+  \Huge
+  \color{yellow!95}
+  \textbf{Códigos para platinar}
+
+  \vspace{0.2cm}
+  \Huge
+  \color{yellow!95}
+  \textbf{Espacio UNAM}
+
+  \vspace{2.5cm}
+  \normalsize
+  \color{red!95}
+  \textbf{COMUNIDAD}
+  \vspace{0.2cm}
+
+  \large
+  \color{white!95}
+  \textbf{Universidad Nacional Autónoma de México}
+
+  \vspace{1cm}
+  \normalsize
+  \color{red!95}
+  \textbf{Este documento no es originalmente mío.} \\
+  \color{white}
+  \textbf{Fue copiado de \href{https://docs.google.com/document/d/1o8UgQYTTjpBznUktuLK0WDKmX9nV4Ao2UIWs1MJQ2-s/edit?tab=t.0}{Drive}, al parecer el creador original es ''Etmis'' así que el crédito es para él y todos los que apoyaron en el drive.} 
+  \vspace{0.2cm}
+  \textbf{yo solo le dí estructura, la versión que copié a latex fue del día 22/10/2026}  \\
+  \vspace{1.5cm}
+
+  \color{red!95}
+  Github:
+  \large
+  \color{white!95}
+  \textbf{\href{https://github.com/JcGCStorm}{JcGCStorm}} 
+\end{center}
+
+% ===================== INDICE =====================
+\newpage
+\renewcommand{\contentsname}{\color{green} Índice}
+\tableofcontents
+
+% ===================== ANUNCIOS =====================
+\input{anuncios}
+
+% ===================== CONTENIDO =====================
+\newpage
+\part{Medallas secretas}
+\input{medallas-secretas}
+
+\part{CCH}
+\input{cch}
+
+\part{Preparatorias}
+\input{preparatorias}
+
+\part{ENES}
+\input{enes/leon}
+\input{enes/juriquilla}
+\input{enes/morelia}
+\input{enes/oaxaca}
+\input{enes/merida}
+
+\part{FES}
+\input{fes/acatlan}
+\input{fes/aragon}
+\input{fes/cuautitlan}
+\input{fes/iztacala}
+\input{fes/zaragoza}
+
+\part{Facultades de CU}
+\input{facultades/ciencias}
+\input{facultades/ingenieria}
+\input{facultades/arquitectura}
+\input{facultades/medicina}
+\input{facultades/veterinaria}
+\input{facultades/enfermeria}
+\input{facultades/musica}
+\input{facultades/quimica}
+\input{facultades/trabajo-social}
+\input{facultades/filosofia-y-letras}
+\input{facultades/politicas-y-sociales}
+\input{facultades/contaduria-y-administracion}
+\input{facultades/artes-y-diseno}
+\input{facultades/economia}
+\input{facultades/derecho}
+\input{facultades/psicologia}
+\input{facultades/odontologia}
+
+\part{Escuelas Nacionales y Otras Entidades}
+\input{escuelas/ciencias-de-la-tierra}
+\input{escuelas/ciencias-forenses}
+\input{escuelas/iimas}
+\input{escuelas/enac}
+\input{escuelas/enallt}
+\input{escuelas/cut}
+\input{escuelas/nanociencias}
+\input{escuelas/cfata-juriquilla}
+\input{escuelas/iies-morelia}
+\input{escuelas/ier-temixco}
+\input{escuelas/ccg-cuernavaca}
+\input{escuelas/iies-merida}
+
+\part{Apartados especiales}
+\input{tocayo}
+\input{casi-familia}
+\input{pastel-compartido}
+\input{compa-de-banca}
+
+\part{Reportes, notas y créditos}
+\input{reportes}
+\input{notas}
+
+\end{document}

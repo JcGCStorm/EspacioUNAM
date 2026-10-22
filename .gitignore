@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Nota: main.pdf NO se ignora a propósito, para poder verlo directo en GitHub, a veces ocasiona choques en Github, pero es mejor que esté.
