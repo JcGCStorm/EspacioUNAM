@@ -5,21 +5,21 @@ Recopilación comunitaria de los códigos de **Espacio UNAM**, en \LaTeX{}, con 
 ## Estructura
 
 ```
-main.tex                     documento principal (portada, índice e \input's)
-medallas-secretas.tex        medallas secretas
-cch.tex                      Colegios de Ciencias y Humanidades
-preparatorias.tex            Preparatorias (1 a 9)
-enes/                        Escuelas Nacionales de Educación Superior
-fes/                         Facultades de Estudios Superiores
-facultades/                  Facultades de Ciudad Universitaria
-escuelas/                    Escuelas Nacionales y otras entidades
-tocayo.tex                   códigos ordenados por primer nombre
-casi-familia.tex             códigos ordenados por primer apellido
-pastel-compartido.tex        códigos ordenados por mes de cumpleaños
-compa-de-banca.tex           código por carrera/plantel/generación
-reportes.tex                 códigos reportados como no funcionales
-notas.tex                    créditos, enlaces y cómo contribuir
-imagenesPortada/             logos de la UNAM
+main.tex                            documento principal (portada, índice e \input's)
+especiales/medallas-secretas.tex    medallas secretas
+prepas-CCH/cch.tex                  Colegios de Ciencias y Humanidades
+prepas-CCH/preparatorias.tex        Preparatorias (1 a 9)
+enes/                               Escuelas Nacionales de Educación Superior
+fes/                                Facultades de Estudios Superiores
+facultades/                         Facultades de Ciudad Universitaria
+escuelas/                           Escuelas Nacionales y otras entidades
+especiales/tocayo.tex               códigos ordenados por primer nombre
+especiales/casi-familia.tex         códigos ordenados por primer apellido
+especiales/pastel-compartido.tex    códigos ordenados por mes de cumpleaños
+especiales/compa-de-banca.tex       código por carrera/plantel/generación
+reportes.tex                        códigos reportados como no funcionales
+estructuralatex/notas.tex           créditos, enlaces y cómo contribuir
+imagenesPortada/                    logos de la UNAM
 ```
 
 Cada archivo de plantel contiene una sección por plantel/facultad y una subsección por carrera, así que solo editas el archivo de tu entidad.
