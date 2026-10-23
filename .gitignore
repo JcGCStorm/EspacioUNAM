@@ -11,5 +11,6 @@
 *.blg
 *.bcf
 *.run.xml
+main.pdf
 
-# Nota: main.pdf NO se ignora a propósito, para poder verlo directo en GitHub, a veces ocasiona choques en Github, pero es mejor que esté.
+# Nota: main.pdf ahora lo ignoramos pero no ignoramos EspacioUNAMCodigos porque va a ser el nuevo pdf, para encontrar más rápido el pdf
