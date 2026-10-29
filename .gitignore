@@ -12,5 +12,4 @@
 *.bcf
 *.run.xml
 main.pdf
-
-# Nota: main.pdf ahora lo ignoramos pero no ignoramos EspacioUNAMCodigos porque va a ser el nuevo pdf, para encontrar más rápido el pdf
+EspacioUNAMCodigos.pdf
