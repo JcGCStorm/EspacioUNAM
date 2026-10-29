@@ -7,6 +7,8 @@ Recopilación comunitaria de los códigos de **Espacio UNAM**, en \LaTeX{}, con 
 ```
 main.tex                            documento principal (portada, índice e \input's)
 especiales/medallas-secretas.tex    medallas secretas
+especiales/pokemones.tex            carreras sin código / pokemones muy difíciles
+especiales/sedes.tex                sedes y bachillerato a distancia
 prepas-CCH/cch.tex                  Colegios de Ciencias y Humanidades
 prepas-CCH/preparatorias.tex        Preparatorias (1 a 9)
 enes/                               Escuelas Nacionales de Educación Superior
@@ -16,7 +18,9 @@ escuelas/                           Escuelas Nacionales y otras entidades
 especiales/tocayo.tex               códigos ordenados por primer nombre
 especiales/casi-familia.tex         códigos ordenados por primer apellido
 especiales/pastel-compartido.tex    códigos ordenados por mes de cumpleaños
+especiales/casi-gemelos.tex         códigos ordenados por día de cumpleaños
 especiales/compa-de-banca.tex       código por carrera/plantel/generación
+especiales/toda-la-republica.tex    códigos ordenados por estado
 reportes.tex                        códigos reportados como no funcionales
 estructuralatex/notas.tex           créditos, enlaces y cómo contribuir
 imagenesPortada/                    logos de la UNAM
