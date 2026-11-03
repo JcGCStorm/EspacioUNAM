@@ -8,9 +8,6 @@ on:
       - '.github/workflows/build-pdf.yml'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,8 +21,9 @@ jobs:
           root_file: main.tex
           args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=EspacioUNAMCodigos"
 
-      - name: Commit del PDF
-        uses: stefanzweifel/git-auto-commit-action@v7
+      - name: Subir PDF como artefacto
+        uses: actions/upload-artifact@v4
         with:
-          commit_message: "Compilar PDF"
-          file_pattern: "EspacioUNAMCodigos.pdf"
+          name: EspacioUNAMCodigos
+          path: EspacioUNAMCodigos.pdf
+          if-no-files-found: error
